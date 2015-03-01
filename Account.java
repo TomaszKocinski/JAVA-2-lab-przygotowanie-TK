@@ -1,7 +1,4 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
  Napisz klasę reprezentującą konto oszczędnościowe, na które można wpłacać i z którego można wypłacać pieniądze. 
  Konto powinno mieć swój numer (numer konta powinien być liczbą całkowitą większą niż 10000). 
  Numery kont powinny być unikalne w skali globalnej (każde nowoutworzone konto powinno mieć unikalny numer). 
@@ -10,10 +7,8 @@
  */
 package przygotowaniedolab2;
 
-/**
- *
- * @author Kot
- */
+ //@author Kot
+ 
 public class Account {
 
     private Integer integer, decimal;

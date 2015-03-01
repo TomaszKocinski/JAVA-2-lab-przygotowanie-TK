@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ 
  Napisz klasę reprezentującą konto oszczędnościowe, na które można wpłacać i z którego można wypłacać pieniądze. 
  Konto powinno mieć swój numer (numer konta powinien być liczbą całkowitą większą niż 10000). 
  Numery kont powinny być unikalne w skali globalnej (każde nowoutworzone konto powinno mieć unikalny numer). 
@@ -14,11 +12,8 @@ import java.util.Scanner;
 import java.util.List;
 import java.util.LinkedList;
 import java.util.ListIterator;
+// @author Kot
 
-/**
- *
- * @author Kot
- */
 public class PrzygotowaniedoLab2 {
 
     public static LinkedList<Account> listA = new LinkedList();
@@ -62,14 +57,13 @@ public class PrzygotowaniedoLab2 {
     public static void ShowListA() {
         ListIterator<Account> listIterator = listA.listIterator();
         for (int i = 1; listIterator.hasNext(); i++) {
-            Account temp=listIterator.next();
+            Account temp = listIterator.next();
             System.out.print(temp.get_number() + ": " + temp.get_stringMoney() + " ");
         }
         System.out.print("\n");
     }
 
     public static void main(String[] args) {
-
         while (true) {
             OptionsToType();
             String s;
@@ -87,14 +81,13 @@ public class PrzygotowaniedoLab2 {
                     ShowListA();
                     s = in.next();
                     if (s.equals("a")) {
-                       AddMoney(selctedAccount);
+                        AddMoney(selctedAccount);
                     } else if (s.equals("s")) {
-                       SubstractMoney(selctedAccount);
+                        SubstractMoney(selctedAccount);
                     } else if (s.equals("e")) {
                         break;
                     }
                 }
-
             } else if (s.equals("2")) {
                 listA.add(CreateAccount());
             } else if (s.equals("3")) {
@@ -105,10 +98,5 @@ public class PrzygotowaniedoLab2 {
                 listIterator.next().interest(5);
             }
         }
-        /*System.out.println(sa.get_number());
-         System.out.println(sa2.get_number());
-         System.out.println(sa.get_stringMoney());
-         System.out.println(sa2.get_stringMoney());*/
     }
-
 }
